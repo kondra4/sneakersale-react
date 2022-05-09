@@ -1,21 +1,47 @@
 function App() {
   return (
     <div className="wrapper">
-        <div className="overlay">
+        <div style={{display: 'none'}} className="overlay">
             <div className="drawer">
-                <h2>Корзина</h2>
+                <h2 className="d-flex justify-between mb-30">
+                    Корзина
+                    <img className="cu-p removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+                </h2>
 
-                <div className="cartItem">
-                    <img className="imgCart"
-                         width={70}
-                         height={70}
-                         src="/img/sneakers/1.jpg"
-                         alt="Sneakers"/>
-                    <div className="priceCart">
-                        <p>Мужские Кроссовки Nike Air Max 270</p>
+                <div className="cartItem d-flex align-center">
+                    <div style={{ backgroundImage: 'url(/img/sneakers/1.jpg)'}}
+                         className="cartItemImg">
+                    </div>
+                    <div className="mr-20">
+                        <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
                         <b>12 999 руб.</b>
                     </div>
                     <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+                </div>
+                <div className="cartItem d-flex align-center">
+                    <div style={{ backgroundImage: 'url(/img/sneakers/2.jpg)'}}
+                         className="cartItemImg">
+                    </div>
+                    <div className="mr-20">
+                        <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                        <b>12 999 руб.</b>
+                    </div>
+                    <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+                </div>
+                <div className="items">
+                    <ul className="cartTotalBlock flex-column">
+                        <li className="d-flex">
+                            <span>Итого:</span>
+                            <div></div>
+                            <b>21 498 руб. </b>
+                        </li>
+                        <li className="d-flex">
+                            <span>Налог 5%: </span>
+                            <div></div>
+                            <b>1074 руб. </b>
+                        </li>
+                    </ul>
+                    <button className="greenButton">Оформить заказ <img src="/img/arrow.svg" alt="Arrow"/></button>
                 </div>
             </div>
         </div>
@@ -28,7 +54,7 @@ function App() {
               </div>
           </div>
           <ul className="headerRight">
-              <li>
+              <li className="mr-30">
                   <img width="18" height="18"src="/img/cart.svg"/>
                   <span>1205 руб.</span>
               </li>
